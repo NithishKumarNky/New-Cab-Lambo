@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="loginstyle.css">
+
+<title>Insert title here</title>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.update{
+    width: 360px;
+    /* height: min-content; */
+    padding: 20px;
+    border-radius: 12px;
+    background: #ffffff;
+    /* background: transparent; */
+}
+.update h1{
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+.update form .form-group{
+    margin-bottom: 15px;
+}
+.update form input[type="submit"]{
+    color: black;
+    font-size: 20px;
+    margin-top: 15px;
+   
+}
+.btn:hover{
+    background-color: deeppink;
+   
+}
+.btn{
+    margin-bottom: 10px;
+}
+
+
+#forgotpasswordbtn{
+    color: blue;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url("Images/car.jpg");
+    background: url("Images/car.jpg");
+    background: rgb(113, 92, 232); */
+        background-image: url("https://media.wired.com/photos/61d6487b704a9d4aab6ee7bc/2:1/w_1962,h_981,c_limit/Business_Cadillac-Halo-001.jpg");
+
+
+    background-size: cover;
+   
+   
+}
+</style>
+</head>
+<body>
+
+<div class="update">
+    <h1 class="text-center">Recover Page</h1>
+<!-- <form action="samplereg.jsp"></form> -->
+<!-- <form class="needs- validation" name="myform"  onsubmit="return validateform()">-->
+<form class="needs- validation" name="myform" action="example.jsp" onsubmit="return validateform()">
+    <div class="form-group was-validated" >
+        <label class="form-label" for="email">Email Address</label>
+        <input class="form-control" type="email" id="email" name="email" required>
+        <div class="invalid-feedback">
+            Please enter your email address
+        </div>
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+    </div>
+<!--     <div class="form-group was-validated"> -->
+<!--         <label class="form-label" for="password">Old Password</label> -->
+<!--         <input class="form-control" type="password" name="oldPassword" id="password" required> -->
+<!--         <div class="invalid-feedback"> -->
+<!--             Please enter your password -->
+<!--         </div> -->
+<!--         <div class="valid-feedback"> -->
+<!--             Looks good! -->
+<!--           </div> -->
+<!--     </div> -->
+    <div class="form-group was-validated">
+        <label class="form-label" for="password">New Password</label>
+        <input class="form-control" type="password" name="newPassword" id="password" required>
+        <div class="invalid-feedback">
+            Please enter your password
+        </div>
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+    </div>
+    
+   
+    <input class="btn btn-success w-100" type="submit" value="Update" >
+
+</body>
+
+<script>
+    function validateform(){  
+    var name=document.myform.name.value;  
+    var password=document.myform.password.value;  
+      
+    if (email==null || email==""){  
+      alert("Name can't be blank");  
+      return false;  
+    }else if(password.length<6){  
+      alert("Password must be at least 6 characters long.");  
+      return false;  
+      }  
+      else if(password="1234567" && email=="nky@gmail.com"){
+alert("Name and pass matched");
+return true;
+      }
+    }  
+</script>
+</html>

@@ -1,0 +1,57 @@
+
+
+
+<html>
+  <head>
+    <title>Bill</title>
+    <style>
+      body { font-family: sans-serif; }
+      table { width: 100%; border-collapse: collapse; }
+      td, th { padding: 8px; text-align: left; border: 1px solid #ccc; }
+      
+      billing-form {
+  width: 500px;
+  margin: 20px auto;
+}
+.billing-form label {
+  display: block;  
+}  
+.billing-form input[type=text] {  
+  width: 100%;  
+}
+    </style>  
+  </head>
+
+  <body>
+    <h1>Bill</h1>
+
+    <table>
+      <tr>
+        <th align="left">Item Name</th>
+        <th align="right">Price</th>
+      </tr>
+
+      <!-- Add rows here -->
+
+    </table><br><br/>
+
+    <!-- Total cost calculation and display -->
+    
+    <div class="billing-form">
+  <h1>Billing Form</h1>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" name="name" />
+
+    <label for="address">Address:</label>
+    <input type="text" name="address" />
+
+    <label for="card-number">Card Number:</label>
+    <input type="text" name="card-number" />
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+  </body>    
+</html>    

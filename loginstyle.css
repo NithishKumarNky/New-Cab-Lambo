@@ -1,0 +1,56 @@
+@charset "ISO-8859-1";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.login{
+    width: 360px;
+    height: min-content; 
+    padding: 20px;
+    border-radius: 12px;
+    background: #ffffff;
+    /* background: transparent; */
+}
+.login h1{
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+.login form .form-group{
+    margin-bottom: 15px;
+}
+.login form input[type="submit"]{
+    color: black;
+    font-size: 20px;
+    margin-top: 15px;
+   
+}
+.btn:hover{
+    background-color: deeppink;
+   
+}
+.btn{
+    margin-bottom: 10px;
+}
+
+
+#forgotpasswordbtn{
+    color: blue;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url("Images/car.jpg");
+    background: url("Images/car.jpg");
+    background: rgb(113, 92, 232); */
+        background-image: url("https://media.wired.com/photos/61d6487b704a9d4aab6ee7bc/2:1/w_1962,h_981,c_limit/Business_Cadillac-Halo-001.jpg");
+
+
+    background-size: cover;
+   
+   
+}

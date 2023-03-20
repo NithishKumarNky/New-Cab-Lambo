@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TYPE OF CAR</title>
+    <style>
+        #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        display: none;
+      }
+     
+      #message-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+      }
+     
+      #message {
+        margin-bottom: 20px;
+      }
+     
+      #ok-button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+        .cancelbtn {
+width: auto;
+padding: 10px 18px;
+background-color: #f44336;
+}
+
+    vehicle{
+ 
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        border:#f1f1f1;
+        cursor: pointer;
+        font-family: Arial, sans-serif;
+        font-size: 25px;
+        width: 1500px;
+        height:150px;
+       
+        }
+        img{
+ vertical-align: middle;
+ margin-right: 500px;
+ width: 60px;
+ }
+ button {
+background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+}
+    </style>
+       <script>
+       function storeSelectedValue() {
+            const radioButtons = document.getElementsById("80");
+            radioButtons.forEach((radioButton) => {
+            radioButton.addEventListener("change", () => {
+            localStorage.setItem("selectedNumber", radioButton.value);
+          });
+        });
+      }; 
+        function showMessage() {
+          var overlay = document.getElementById("overlay");
+          var messageBox = document.getElementById("message-box");
+          var message = document.getElementById("message");
+         
+          overlay.style.display = "block";
+          messageBox.style.display = "block";
+          message.innerHTML = "Driver Name: Sundar <br> Phone No.: 95680 73820 <br> Vehicle No.: TN 21 4587 <br> Seater Capacity: 4 <br> Driver Rating: -***-";
+         
+        }
+   function showMessagea() {
+          var overlay = document.getElementById("overlay");
+          var messageBox = document.getElementById("message-box");
+          var message = document.getElementById("message");
+          
+          overlay.style.display = "block";
+          messageBox.style.display = "block";
+          message.innerHTML = "Driver Name: Manoj <br> Phone No.: 97489 54250 <br> Vehicle No.: TN 23 8954 <br> Seater Capacity: 7 <br> Driver Rating: ****-";
+        
+        }
+        function showMessageb() {
+          var overlay = document.getElementById("overlay");
+          var messageBox = document.getElementById("message-box");
+          var message = document.getElementById("message");
+          
+          overlay.style.display = "block";
+          messageBox.style.display = "block";
+          message.innerHTML = "Driver Name: Kumeran <br> Phone No.: 97450 86543 <br> Vehicle No.: TN 23 6543 <br> Seater Capacity: 4 <br> Driver Rating: *****";
+        
+        }      
+        function hideMessage() {
+          var overlay = document.getElementById("overlay");
+          var messageBox = document.getElementById("message-box");
+          overlay.style.display = "none";
+          messageBox.style.display = "none";
+        }
+
+        function RadioValue(){
+            const cartype=document.getElementById("car-type").value;
+            document.getElementById("result").innerHTML ="";
+            var ele = document.getElementsByTagName('input');
+          
+        for(i = 0; i < ele.length; i++) {
+              
+            if(ele[i].type="radio") {
+              
+                if(ele[i].checked)
+                    document.getElementById("result").innerHTML
+                            += ele[i].name
+                            += ele[i].value + "<br>";                           
+            }
+          }
+          const distance = localStorage.getItem('dis');
+            console.log(distance); 
+            
+            const TripFare=parseFloat(distance*cartype);
+           //const TripFare=distance*cartype;
+            
+            document.write(TripFare);
+            localStorage.setItem('fare', TripFare);
+            //window.location.href = 'bill1.html';
+            //const fare=ele[i].value*localStorage.getItem('dis');
+            //document.write(fare);
+        }        
+      </script>
+       
+</head>
+<body onload="storeSelectedValue()">
+    <form action="bill1.html">
+        <fieldset>
+            <legend>Select an option:</legend><br>
+            <vehicle>
+            <label for = "option1" type="radio" name="number" id="car-type" >
+                <input type="radio"  name="option" id="car-type" value="20" onclick = "showMessage()">               
+                <img src="4 seater.jpg" alt="Option1" width="70">
+                <span style="font-size: 20px;">Rs.20/km</span>
+            </label> </vehicle>
+            <br><br><br>
+            <vehicle>
+            <label for = "option2">
+                <input type="radio" name="option" id="car-type" value="20" onclick="showMessagea()">
+                <img src="8 seater.jpg" alt="Option2" width="70">
+                <span style="font-size: 20px;">Rs.20/km</span>
+            </label> </vehicle>
+                <br><br><br>
+                <vehicle>
+            <label for = "option3">
+                <input type="radio" name="option" id="car-type" value="20" onclick="showMessageb()">
+                <img src="sedan.jpg" alt="Option3" width="40">
+                <span style="font-size: 20px;">Rs.20/km</span>
+            </label> </vehicle>
+            <br><br>
+        </fieldset>
+       <br> <button type="button" onclick="RadioValue()">
+        <input type = "submit" value = "Proceed to Payment">
+      </button>    
+      
+    </form>
+    <div id="result"></div>
+    <div id="overlay">
+        <div id="message-box">
+            <div id="message"></div>
+            <button id="ok-button" onclick="hideMessage()">OK</button>
+        </div>
+    </div>
+</body>
+</html>
+	
