@@ -1,0 +1,23 @@
+{
+	"name": "DS_DDRIVE_CSV",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_GDRIVE",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "/uc?id=1AGXVlDhbMbhoGXDJG0IThnqz86Qy3hqb"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "'"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

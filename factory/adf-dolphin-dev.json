@@ -1,0 +1,9 @@
+{
+	"name": "adf-dolphin-dev",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "71c97b71-bcf1-4175-957c-482775b4b10a",
+		"tenantId": "27b3eb06-f57b-4b1b-8f75-bb103df60d79"
+	}
+}

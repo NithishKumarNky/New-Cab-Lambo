@@ -1,0 +1,17 @@
+{
+	"name": "LS_SQL_DOLPHIN",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "dolphin99.database.windows.net",
+			"database": "nithish_db_dolphin",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "adminsql",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEUzRUNEQkFCLTREQ0EtNDgwNS1BQ0Y4LUE3NEY1RTY5OEY1NV8wNGYxYjFiZC1jODZlLTQ4N2EtODhmNC1iMWZjYzEyOWRkNDMiDQp9"
+		}
+	}
+}
