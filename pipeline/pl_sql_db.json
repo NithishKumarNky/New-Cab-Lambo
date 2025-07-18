@@ -39,6 +39,128 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "step",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "step",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "customer",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "customer",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "age",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "age",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "gender",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "gender",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "zipcodeOri",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "zipcodeOri",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "merchant",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "merchant",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "zipMerchant",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "zipMerchant",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "category",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "category",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "amount",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "amount",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "fraud",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "fraud",
+									"type": "String",
+									"physicalType": "String"
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
